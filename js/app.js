@@ -30,9 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let added = a * b;
-  let message = `The product of ${a} and ${b} is ${added}.`;
-  let result = [added, message];
+  let multi = a * b;
+  let message = `The product of ${a} and ${b} is ${multi}.`;
+  let result = [multi, message];
   return result;
 }
 
@@ -54,11 +54,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let added = sum(a, b)[0];
+  let finalSum = sum(added, c)[0];
+  let multi = multiply(a, b)[0];
+  let finalMulti = multiply(multi, c)[0];
+  let messageSum = `${a} and ${b} and ${c} sum to ${finalSum}.`;
+  let messageMulti = `The product of ${a} and ${b} and ${c} is ${finalMulti}.`;
+  let result = [finalSum, finalMulti, messageSum, messageMulti];
+  return result;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -76,7 +83,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
